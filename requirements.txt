@@ -1,7 +1,4 @@
 numpy
 scipy
 matplotlib
-tkinter
-tkinter.messagebox
-tkinter.filedialog
-pillow
+
