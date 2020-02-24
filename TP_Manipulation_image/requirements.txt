@@ -1,4 +1,3 @@
 tkinter.messagebox
 tkinter.filedialog
-pandas
-pillow
+pil
