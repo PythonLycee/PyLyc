@@ -1,6 +1,5 @@
 numpy
 scipy
 matplotlib
-os
 folium
 webbrowser
