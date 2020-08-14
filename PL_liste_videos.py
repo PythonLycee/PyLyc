@@ -57,7 +57,3 @@ def menu_choix_video(Bibliotheque_videos):
     #renvoi de la référence Youtube correspondante
     return Bibliotheque_videos[int(input())-1].ref
      
-ref_yt=menu_choix_video(Bibliotheque_videos)
-IPython.display.clear_output()
-sleep(0.5)
-YouTubeVideo(ref_yt,width=960,height=540)
