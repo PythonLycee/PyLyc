@@ -56,7 +56,11 @@ def menu_choix_video(Bibliotheque_videos):
     sleep(0.5)
     #choix de la video
     choix = -1
-    while not 1<=choix<=len(Bibliotheque_videos): choix=int(input())
+    while not 1<=choix<=len(Bibliotheque_videos):   
+        try:
+            choix=int(input())
+        except:
+            print("Saisie invalide")
     
     #renvoi de la référence Youtube correspondante
     return Bibliotheque_videos[int(input())-1].ref
