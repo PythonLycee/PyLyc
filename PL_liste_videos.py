@@ -54,6 +54,10 @@ def menu_choix_video(Bibliotheque_videos):
     
     #précaution d'attente pour que le input soit inséré après le html
     sleep(0.5)
+    #choix de la video
+    choix = -1
+    while not 1<=choix<=len(Bibliotheque_videos): choix=int(input())
+    
     #renvoi de la référence Youtube correspondante
     return Bibliotheque_videos[int(input())-1].ref
      
