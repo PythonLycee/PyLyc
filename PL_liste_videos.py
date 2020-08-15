@@ -63,5 +63,5 @@ def menu_choix_video(Bibliotheque_videos):
             print("Saisie invalide")
     
     #renvoi de la référence Youtube correspondante
-    return Bibliotheque_videos[int(input())-1].ref
+    return Bibliotheque_videos[choix-1].ref
      
