@@ -17,7 +17,8 @@ class PL_video:
 #Définition de la bibliothèque des vidéos disponibles
 Bibliotheque_videos=[
     PL_video(nom="Premiers pas en console et affectations de variables",ref="QD72fHg6rBI"),
-    PL_video(nom="Écrire ses premières fonctions Python",ref="6PLkqM99NIE")]
+    PL_video(nom="Écrire ses premières fonctions Python",ref="6PLkqM99NIE"),
+    PL_video(nom="Instructions conditionnelles",ref="MTNxWaBPRqM")]
 
 
 def menu_choix_video(Bibliotheque_videos):
