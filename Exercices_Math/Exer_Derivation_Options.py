@@ -49,6 +49,5 @@ html_presentation_Options="""
 """
 
 Options_exercices=Menu_Options()
-display(HTML(html_presentation_Options))
-display(Options_exercices)
+
 
