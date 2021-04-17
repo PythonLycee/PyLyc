@@ -772,4 +772,3 @@ def Exerciceur_Derivation(Liste_exercices,titre_exercice="Application des formul
         
 
 
-Exerciceur_Derivation(genere_Liste_exercices(type_coeff,fonc_usuel,formules))
