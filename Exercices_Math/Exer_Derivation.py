@@ -556,11 +556,15 @@ try:
     formules =   list(Options_exercices.children[2].value)    
 except:
     #valeurs par défaut sinon (si Options_exercices n'existe pas)
-    type_coeff = ['coefficients rationnels']
-    fonc_usuel = ['puissances positives', 'puissances négatives', 'racine carrée']
+    type_coeff = ['coefficients entiers','coefficients rationnels']
+    fonc_usuel = ['puissances positives', 'puissances négatives', 'racine carrée', 'cosinus et sinus','exponentielle', 'logarithme népérien']
     formules =   ['Produit par un scalaire', 'Somme de fonctions', 'Produit de fonctions', 'Quotient de fonctions']
 
 
+    
+    
+    
+    
 # GENERATION DES LISTES D'EXERCICES
 
 #exercices = [ (derivee_produit_par_scalaire,[liste_fonc]),(derivee_somme,[liste_fonc3,liste_fonc3])]    
