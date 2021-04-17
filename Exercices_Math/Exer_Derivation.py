@@ -237,9 +237,12 @@ def derivee_produit(l=['x'],Rationnel=True):
     f_usuelle1 = eval(choice(l[0])) # génération d'une fonction usuelle
         
     f_usuelle2 = f_usuelle1
-    while f_usuelle2==f_usuelle1: # génération d'une AUTRE fonction usuelle
+    
+    test_boucle_infini=0
+    while f_usuelle2==f_usuelle1 and test_boucle_infini<10: # génération d'une AUTRE fonction usuelle
         f_usuelle2 = eval(choice(l[1]))  
-     
+        test_boucle_infini+=1
+    
     f = (Coeff1*f_usuelle1)*f_usuelle2 
         
     correction=["f(x)="+par(latex(simplify(Coeff1*f_usuelle1)))+latex(simplify(Coeff1*f_usuelle1))+par(latex(simplify(Coeff1*f_usuelle1)),False)+" \\times "+par(latex(f_usuelle2))+latex(f_usuelle2)+par(latex(f_usuelle2),False) ]
@@ -304,11 +307,13 @@ def derivee_quotient(l=['x'],Rationnel=True):
     # le coeff est rattaché à la fonction 1 
     
     f_usuelle1 = eval(choice(l[0])) # génération d'une fonction usuelle
-        
+    
+    test_boucle_infini=0
     f_usuelle2 = f_usuelle1
-    while f_usuelle2==f_usuelle1: # génération d'une AUTRE fonction usuelle
+    while f_usuelle2==f_usuelle1 and test_boucle_infini<10: # génération d'une AUTRE fonction usuelle
         f_usuelle2 = eval(choice(l[1]))  
-     
+        test_boucle_infini+=1
+        
     f = (Coeff1*f_usuelle1)/f_usuelle2 
         
     correction=["f(x)= "+latex(Coeff1)+"\\times \\frac{"+latex(f_usuelle1)+"}{"+latex(f_usuelle2)+"}"]
@@ -683,8 +688,7 @@ def Exerciceur_Derivation(Liste_exercices,titre_exercice="Application des formul
         
         
         fonction_formule,liste_fonctions_usuelles = choice(Liste_exercices)
-        print("fonction_formule",fonction_formule)
-        print("liste_fonctions_usuelles",liste_fonctions_usuelles)
+        
         
         
         consigne,sol,correction,L_feedback,L_aide = fonction_formule(liste_fonctions_usuelles,Rationnel)
@@ -768,3 +772,4 @@ def Exerciceur_Derivation(Liste_exercices,titre_exercice="Application des formul
         
 
 
+Exerciceur_Derivation(genere_Liste_exercices(type_coeff,fonc_usuel,formules))
