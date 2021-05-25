@@ -441,7 +441,7 @@ def html_correction(entete="",correction="",vide=False,insert_html='',align='cen
     correction : liste des lignes de type str
     vide : booléen qui indique si la zone doit être vide
     """
-    insert_html += '<div id="correction" style="float: '+align+'; min-width: '+str(width)+'px; max-width: '+str(width)+'px; width: '+str(width)+'px; height: '+str(height)+'px;  background-color: '+backcolor+'; padding:'+str(padding)+'em; ;margin: '+str(margin)+'em;">'
+    insert_html += '<div id="correction" style="overflow-x:scroll; overflow-y:scroll; window.document.getElementById(div).scrollTop = window.document.getElementById(div).scrollHeight; float: '+align+'; min-width: '+str(width)+'px; max-width: '+str(width)+'px; width: '+str(width)+'px; height: '+str(height)+'px;  background-color: '+backcolor+'; padding:'+str(padding)+'em; ;margin: '+str(margin)+'em;">'
     if not vide: 
         insert_html += '<h2 style="color:#123456; font-size: 14px; text-align:left;"><strong>'+entete+'</strong><br>'
         for ligne in correction:
@@ -458,7 +458,7 @@ def html_feedback(commentaires=[],aide=None,insert_html='',align='center',width=
     création de la zone de feedback
     feedback : liste des lignes de type str
     """
-    insert_html += '<div id="correction" style="overflow-x:scroll; overflow-y:scroll; window.document.getElementById(div).scrollTop = window.document.getElementById(div).scrollHeight; float: '+align+'; min-width: '+str(width)+'px; max-width: '+str(width)+'px; width: '+str(width)+'px; height: '+str(height)+'px;  background-color: '+backcolor+'; padding:'+str(padding)+'em; ;margin: '+str(margin)+'em;">'
+    insert_html += '<div id="feed_back" style="float: '+align+'; min-width: '+str(width)+'px; max-width: '+str(width)+'px; width: '+str(width)+'px; height: '+str(height)+'px;  background-color: '+backcolor+'; padding:'+str(padding)+'em; ;margin: '+str(margin)+'em;">'
     
     #affichage de l'aide
     if aide:
