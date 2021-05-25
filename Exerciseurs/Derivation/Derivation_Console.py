@@ -660,9 +660,9 @@ def Exerciceur_Derivation(titre_exercice="Application des formules de dérivatio
 
         try:
             #récupération des options
-            type_coeff = list(Options_exercices.children[0].value)  
-            fonc_usuel = list(Options_exercices.children[1].value)
-            formules =   list(Options_exercices.children[2].value)    
+            type_coeff = list(Derivation_Options.Options_exercices.children[0].value)  
+            fonc_usuel = list(Derivation_Options.Options_exercices.children[1].value)
+            formules =   list(Derivation_Options.Options_exercices.children[2].value)    
 
         except:
             #valeurs par défaut sinon (si Options_exercices n'existe pas)
