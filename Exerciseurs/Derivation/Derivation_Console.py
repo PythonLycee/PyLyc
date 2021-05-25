@@ -616,7 +616,7 @@ def genere_Liste_exercices(type_coeff,fonc_usuel,formules):
 def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formules de dérivation"): 
     """
     Argument 
-    Derivation_Options.Options_exercices
+    Derivation_Options.Options_exercices.children
     
     """
     
