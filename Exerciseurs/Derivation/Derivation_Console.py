@@ -618,7 +618,6 @@ def Exerciceur_Derivation(titre_exercice="Application des formules de dérivatio
     Argument exercice : fonction qui génère l'exercice
     
     """
-    global Options_exercices
     
     #création du head de la page html avec insertions css
     head = """
@@ -664,15 +663,13 @@ def Exerciceur_Derivation(titre_exercice="Application des formules de dérivatio
             type_coeff = list(Options_exercices.children[0].value)  
             fonc_usuel = list(Options_exercices.children[1].value)
             formules =   list(Options_exercices.children[2].value)    
-            print("ok",formules)
-            input()
+
         except:
             #valeurs par défaut sinon (si Options_exercices n'existe pas)
             type_coeff = ['coefficients entiers','coefficients rationnels']
             fonc_usuel = ['puissances positives', 'puissances négatives', 'racine carrée', 'cosinus et sinus','exponentielle', 'logarithme népérien']
             formules =   ['Produit par un scalaire', 'Somme de fonctions', 'Produit de fonctions', 'Quotient de fonctions']
-            print("pas ok",formules)
-            input()
+
             
         # génération de l'énoncé+aide+feedback
         # l'exercice est choisi au hasard parmi la liste des possibilités

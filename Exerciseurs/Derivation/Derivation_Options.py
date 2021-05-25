@@ -53,12 +53,9 @@ html_presentation_Options="""
 
 """
 
-def Aff_Opt():
-    display(HTML(html_presentation_Options))                    # affichage de la présentation des options
-    Options_exercices = Menu_Options()
-    display(Options_exercices)                                  # affichage des menus déroulants
 
-    output = widgets.Output()                                   # gestion des sorties
+display(HTML(html_presentation_Options))                    # affichage de la présentation des options
+Options_exercices = Menu_Options()
+display(Options_exercices)                                  # affichage des menus déroulants
 
-
-
+output = widgets.Output()                                   # gestion des sorties
