@@ -458,7 +458,7 @@ def html_feedback(commentaires=[],aide=None,insert_html='',align='center',width=
     création de la zone de feedback
     feedback : liste des lignes de type str
     """
-    insert_html += '<div id="correction" style="float: '+align+'; min-width: '+str(width)+'px; max-width: '+str(width)+'px; width: '+str(width)+'px; height: '+str(height)+'px;  background-color: '+backcolor+'; padding:'+str(padding)+'em; ;margin: '+str(margin)+'em;">'
+    insert_html += '<div id="correction" style="overflow-x:scroll; overflow-y:scroll; window.document.getElementById(div).scrollTop = window.document.getElementById(div).scrollHeight; float: '+align+'; min-width: '+str(width)+'px; max-width: '+str(width)+'px; width: '+str(width)+'px; height: '+str(height)+'px;  background-color: '+backcolor+'; padding:'+str(padding)+'em; ;margin: '+str(margin)+'em;">'
     
     #affichage de l'aide
     if aide:
@@ -466,7 +466,7 @@ def html_feedback(commentaires=[],aide=None,insert_html='',align='center',width=
 
         insert_html += """
         
-        <div class="Aide_parent">
+        <div class="Aide_parent" style="">
         <span style="color:#14A752; font-weight:bold;"> Aide </span>
         <div class="Aide_enfant">
         <div style="color:#14A752; text-align: left; background-color: #D9FEEC;">
@@ -650,7 +650,7 @@ def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formule
         
         </style>
     </head>      
-    """ #reprendre des élements de BBDSQL pour le style
+    """
     
     
     # Constantes pour le score
