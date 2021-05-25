@@ -619,6 +619,11 @@ def Exerciceur_Derivation(titre_exercice="Application des formules de dérivatio
     
     """
     
+    print(Derivation_Options.Options_exercices.children)
+    
+    
+    
+    
     #création du head de la page html avec insertions css
     head = """
     <head>
