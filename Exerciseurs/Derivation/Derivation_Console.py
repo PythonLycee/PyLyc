@@ -613,15 +613,12 @@ def genere_Liste_exercices(type_coeff,fonc_usuel,formules):
   
     
 
-def Exerciceur_Derivation(titre_exercice="Application des formules de dérivation"): 
+def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formules de dérivation"): 
     """
-    Argument exercice : fonction qui génère l'exercice
+    Argument 
+    Derivation_Options.Options_exercices
     
     """
-    
-    print(Derivation_Options.Options_exercices.children)
-    
-    
     
     
     #création du head de la page html avec insertions css
@@ -665,9 +662,9 @@ def Exerciceur_Derivation(titre_exercice="Application des formules de dérivatio
 
         try:
             #récupération des options
-            type_coeff = list(Derivation_Options.Options_exercices.children[0].value)  
-            fonc_usuel = list(Derivation_Options.Options_exercices.children[1].value)
-            formules =   list(Derivation_Options.Options_exercices.children[2].value)    
+            type_coeff = list(E_Options[0].value)  
+            fonc_usuel = list(E_Options[1].value)
+            formules =   list(E_Options[2].value)    
 
         except:
             #valeurs par défaut sinon (si Options_exercices n'existe pas)
