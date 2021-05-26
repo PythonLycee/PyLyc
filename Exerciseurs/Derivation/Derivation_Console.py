@@ -279,12 +279,13 @@ def derivee_quotient(l=['x'],Rationnel=True):
     Coeff1 = koeff(Rationnel) # génération d'un coefficient non nul   
     # le coeff est rattaché à la fonction 1 
     
-    f_usuelle1 = eval(choice(l[0])) # génération d'une fonction usuelle
+    
     
     test_boucle_infini=0
-    f_usuelle2 = f_usuelle1
-    while f_usuelle2==f_usuelle1 and test_boucle_infini<10: # génération d'une AUTRE fonction usuelle
-        f_usuelle2 = eval(choice(l[1]))  
+    f_usuelle1 = None ; f_usuelle2 = None
+    while f_usuelle2==f_usuelle1 and test_boucle_infini<10: 
+        f_usuelle1 = eval(choice(l[0])) # génération d'une fonction usuelle
+        f_usuelle2 = eval(choice(l[1])) # génération d'une AUTRE fonction usuelle 
         test_boucle_infini+=1
         
     f = (Coeff1*f_usuelle1)/f_usuelle2 
