@@ -560,7 +560,7 @@ def genere_Liste_exercices(type_coeff,fonc_usuel,formules):
                                      [liste_principale_fonc,[f_polynome(2,True if Rationnel else False) for k in range(3)]]) )  
         # Pour le quotient
         if formule == 'Quotient de fonctions': 
-            Liste_exercices.append( (formule_corr[formule],[liste_secondaire_fonc if len(liste_secondaire_fonc)>1 else ['1','x'],liste_secondaire_fonc]) )
+            Liste_exercices.append( (formule_corr[formule],[liste_secondaire_fonc if len(liste_secondaire_fonc)>1 else ['x+1','x-1'],liste_secondaire_fonc]) )
         if formule == 'Quotient de fonctions' and 'puissances positives' in fonc_usuel:    
             Liste_exercices.append( (formule_corr[formule],[liste_secondaire_fonc,[f_polynome(2,True if Rationnel else False) for k in range(3)]]) )
         
