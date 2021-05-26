@@ -55,10 +55,6 @@ def koeff(Rationnel=True,Nonnul=True):
 
 
 
-
-
-
-
 def derivee_produit_par_scalaire(l=['x'],Rationnel=True):
     """
     génère une fonction produit d'un coefficient et d'une fonction 
@@ -195,13 +191,6 @@ def derivee_somme(l=['x'],Rationnel=True):
     return consigne,sol,correction,L_feedback,L_aide
 
 
-
-    
-    
-    
-    
-    
-    
     
 def derivee_produit(l=['x'],Rationnel=True):
     """
@@ -347,18 +336,6 @@ def derivee_quotient(l=['x'],Rationnel=True):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 def html_presentation(titre_exercice="",decompte_reponses=[0,0,0],insert_html='',align='center',width=800,height=70,backcolor='#FAE5D3',padding=0.5,margin=0.1):
     """
     création de la boîte du titre 
@@ -498,12 +475,7 @@ def html_feedback(commentaires=[],aide=None,insert_html='',align='center',width=
     insert_html += '</div>'
     return insert_html
 
-    # overflow-x:scroll; overflow-y:scroll; window.document.getElementById(div).scrollTop = window.document.getElementById(div).scrollHeight;
 
-  
-    
-
-    
 def Genere_html(consigne,correction,commentaires=[],vide=False,decompte_reponses=[0,0,0],aide=None,titre_exercice=""):
     """
     Fonction qui génère l'affichage html
@@ -518,23 +490,6 @@ def Genere_html(consigne,correction,commentaires=[],vide=False,decompte_reponses
     return body
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
     
 # GENERATION DES LISTES D'EXERCICES
 
@@ -542,6 +497,8 @@ def Genere_html(consigne,correction,commentaires=[],vide=False,decompte_reponses
 #exercices2 = [ (derivee_produit,[liste_fonc,liste_fonc]) ]
     
 #Rationnel = True if 'coefficients rationnels' in type_coeff else (False if 'coefficients entiers' in type_coeff else None)
+
+
 Rationnel = True
     
 def genere_Liste_exercices(type_coeff,fonc_usuel,formules):
@@ -678,21 +635,11 @@ def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formule
         
         Liste_exercices = genere_Liste_exercices(type_coeff,fonc_usuel,formules)
         
-        
-        
-        
-        
         fonction_formule,liste_fonctions_usuelles = choice(Liste_exercices)
-        
-        
-        
+
         consigne,sol,correction,L_feedback,L_aide = fonction_formule(liste_fonctions_usuelles,Rationnel)
         
-        #exercice(l=l,Rationnel=(Options.children[0].value=="Rationnel")) 
-        
-        
-        
-        
+
         # création de l'affichage html
         body = Genere_html(consigne,correction,vide=True,decompte_reponses=decompte_reponses,titre_exercice=titre_exercice)
                 
@@ -721,7 +668,6 @@ def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formule
 
             Verification = expand(proposition)==expand(sol)
 
-            
             if Verification:        
                 decompte_reponses[essai] += 1 # on incrémente le décompte correspond à l'essai concluant
                 decompte_reponses[0] +=1      # on incrémente le compteur du nombre de questions
@@ -729,8 +675,7 @@ def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formule
                 commentaires = ["\\text{Votre saisie : }"+str(latex(proposition))]                
                 commentaires += L_feedback[0] # création du commentaire feedback (réponse juste)
                 
-                
-                
+  
             else:
                 if essai==1 :                     # si erreur au 1er essai
                     aide_dispo = True            # on permet l'affichage de l'aide    
@@ -740,9 +685,7 @@ def Exerciceur_Derivation(E_Options=None,titre_exercice="Application des formule
                 commentaires = ["\\text{Votre saisie : }"+str(latex(proposition))]
                 commentaires += L_feedback[essai] # création du commentaire feedback (réponse fausse)
                 
-                
-                
-                
+
             # création de l'affichage html
             body = Genere_html(consigne,correction,commentaires=commentaires,vide=(essai==1 and not Verification),decompte_reponses=decompte_reponses,aide=(L_aide if aide_dispo else None),titre_exercice=titre_exercice) 
             
