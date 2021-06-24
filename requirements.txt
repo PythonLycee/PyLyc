@@ -6,4 +6,4 @@ folium
 pyroutelib3
 sympy
 ipywidgets
-winsound
+
